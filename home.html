@@ -30,37 +30,31 @@
     
     <a-assets>
         
-        
-        <!-- luz -->
-        <img id="lightswitch" src="img/switch.png">
-        
-        
         <!-- contatos -->
         <img id="github" src="img/github.gif">
         <img id="facebook" src="img/facebook.png">
         <img id="twitter" src="img/twitter.png">
         
-        
-        <!-- artigos -->
-        <img id="incd" src="img/brasnam.jpg">
-        <img id="brasnam" src="img/brasnam.jpg">
-        
-        
-        <!-- sky -->
-        <img id="skyTexture"  src="img/fundo.png">
+        <!-- profile -->
+        <img id="profilepic1"  src="img/profile1.jpg">
+        <img id="profilepic2"  src="img/profile2.jpg">
+        <img id="profilepic3"  src="img/profile3.jpg">
+        <img id="profilepic4"  src="img/profile4.jpg">
+        <img id="profilepic5"  src="img/profile5.jpg">
+        <img id="profilepic6"  src="img/profile6.jpg">
     
         
-        <!-- profile -->
-        <img id="profilepic"  src="img/profile.jpg">
+    
+        <video id="fundo" autoplay loop="true" src="vid/IMG_2341.mp4"> </video>
     
     </a-assets>
 
     
     <!-- luz -->
-    <a-entity class="switch"  geometry="primitive: box" material="src: #lightswitch" scale="1 1 1" position="0 -2 0" >
+    <a-entity id="profilebox" class="switch"  geometry="primitive: box" material="src: #profilepic1" scale="5 5 5" position="0 -2 0" >
         <a-event name="mouseenter" rotation="180 0 0"></a-event>
         <a-event name="mouseleave" rotation="0 0 0"></a-event>
-        <a-animation dur="10000" attribute="position" from="-20 4 1" to="20 4 -30" direction="alternate" repeat="indefinite"
+        <a-animation dur="10000" attribute="position" from="-10 4 1" to="20 4 -30" direction="alternate" repeat="indefinite"
                      easing="ease-in-out-cubic"></a-animation>
         <a-animation delay="3000" attribute="geometry.height" to="0" direction="alternate" repeat="indefinite"
                  easing="ease-in-circ" ></a-animation>
@@ -71,27 +65,8 @@
     </a-entity>
     
 
-    
-    
-    <!-- contatos -->
-    <!--
-    <a-cylinder onclick="window.location = 'http://github.com/rafaelhss'" id="github" class="apagar" radius="0.5" transparen="true"  src="#github" position="-0.5 0 -4.5" rotation="0 70 30" scale="2 0.2 2"></a-cylinder>
-    <a-cylinder onclick="window.location = 'http://twitter.com/rafelrafel'" id="twitter" class="apagar" radius="0.5" transparen="true"  src="#twitter" position="1.2 0 -6" rotation="0 70 30" scale="2 0.2 2"></a-cylinder>
-    <a-cylinder onclick="window.location = 'https://www.facebook.com/rafael.henrique.507464'" id="facebook" class="apagar" radius="0.5" transparen="true"  src="#facebook" position="-0+4 0 -6.5" rotation="0 70 30" scale="2 0.2 2"></a-cylinder>
-    -->
-    
-    <!-- artigos -->
-    <!--
-    <a-box  class="apagar" onclick="window.location = 'http://www.revistas.usp.br/incid/article/view/76282'" scale="1.0 1.3 0.2"  position="17 0 -3" src="#incd" rotation="-70 20 -10" > </a-box>
-    <a-box   class="apagar"onclick="window.location = 'http://ebooks.pucrs.br/edipucrs/anais/csbc/assets/2016/brasnam/11.pdf'" scale="1.0 1.3 0.2"  position="17.8 0 -2" src="#brasnam" rotation="-70 10 30" > </a-box>
-    -->
-    
     <a-mixin id="profiletxt" text="color: white; anchor: center; font: sourcecodepro; value: I am Rafael :-) "></a-mixin>
     <a-text  mixin="profiletxt" font="kelsonsans" width="170" position="-5 30 -90" wrap-count="20" rotation="0 20 0"></a-text>
-    
-    <!--
-    <a-box scale="5 30 30"  position="70 24 -90" src="#profilepic" rotation="10 45 20" > </a-box>
-    -->
     
     
     <a-mixin id="welcometxt" text="color: gray; anchor: center; font: sourcecodepro; value: This my personal website. Dont follow me, I am lost too."></a-mixin>
@@ -100,29 +75,27 @@
     <a-mixin id="welcometxt2" text="color: black; anchor: center; font: sourcecodepro; value: I could post things I like, what I work with or am up to, but these change too often. find me at social media and lets talk."></a-mixin>
     <a-text mixin="welcometxt2" font="kelsonsans" width="10" position="0 -2 0"  rotation="0 0 0"></a-text>
     
+
+    
+    
     <a-cylinder onclick="window.location = 'http://github.com/rafaelhss'" id="github" class="apagar" radius="0.1" transparen="true"  src="#github" position="6.0 -2.3 0" rotation="0 90 90" scale="2 0.1 2"></a-cylinder>
     <a-cylinder onclick="window.location = 'http://twitter.com/rafelrafel'" id="twitter" class="apagar" radius="0.1" transparen="true"  src="#twitter" position="6.3 -2.5 0" rotation="0 90 90" scale="2 0.1 2"></a-cylinder>
     <a-cylinder onclick="window.location = 'https://www.facebook.com/rafael.henrique.507464'" id="facebook" class="apagar" radius="0.1" transparen="true"  src="#facebook" position="6.6 -2.3 0" rotation="0 90 90" scale="2 0.1 2"></a-cylinder>
     
     
-  
+    <a-mixin id="babylontxt" text="color: gray; anchor: center; font: sourcecodepro; value: Nao deixe a babilonia te conquistar..."></a-mixin>
+    <a-text mixin="babylontxt" font="kelsonsans" width="20" position="-18 12 10"  rotation="40 110 10"></a-text>
     
-    <!--
-    <a-sky color="#000"></a-sky>
-    <a-sky id="fundo" src="#skyTexture"></a-sky>
-    -->
-     <a-assets>
-    <video id="antarctica" autoplay loop="true" src="vid/IMG_2341.mp4"> </video>
-    </a-assets>
-
-    <!-- Using the asset management system. -->
-    <a-videosphere src="#antarctica" radius="5000" rotation="0 -55 0"></a-videosphere>
+    
+    
+    <a-videosphere src="#fundo" radius="5000" rotation="0 -55 0"></a-videosphere>
     
 </a-scene>
 </body>
 <script>
     
     var count = 0;
+    //nao usado
     var carregarImagens = function(){
         /*
         var number = Math.floor(Math.random() * 34) + 1;
@@ -141,6 +114,7 @@
     
     
     
+    //nao usado
     var photoCount = 0;
     var addRandomObject = function(src){
         
@@ -212,12 +186,28 @@
         
     }
 
+    var profile = 1;
+    var changeProfile = function(){
+        
+        if(++profile > 6)
+            profile = 1
+        var src = "src: #profilepic" + profile;
+        
+        console.log(src)
+        document.getElementById("profilebox").setAttribute('material',src);
+    }
+    
     var boxEl = document.querySelector('.switch');
     boxEl.addEventListener('mouseenter', function () {
         //carregarImagens();
+        changeProfile();
+        
+        
     });
     
-    carregarImagens();
+    
+    
+    //carregarImagens();
     
 
     
