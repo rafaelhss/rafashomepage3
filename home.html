@@ -87,41 +87,36 @@
     -->
     
     <a-mixin id="profiletxt" text="color: white; anchor: center; font: sourcecodepro; value: I am Rafael :-) "></a-mixin>
-    <a-text class="apagar" mixin="profiletxt" font="kelsonsans" width="170" position="-5 30 -90" wrap-count="20" rotation="0 20 0"></a-text>
+    <a-text  mixin="profiletxt" font="kelsonsans" width="170" position="-5 30 -90" wrap-count="20" rotation="0 20 0"></a-text>
     
+    <!--
     <a-box scale="5 30 30"  position="70 24 -90" src="#profilepic" rotation="10 45 20" > </a-box>
+    -->
     
     
+    <a-mixin id="welcometxt" text="color: gray; anchor: center; font: sourcecodepro; value: This my personal website. Dont follow me, I am lost too."></a-mixin>
+    <a-text mixin="welcometxt" font="kelsonsans" width="15" position="0 0 0"  rotation="0 0 0"></a-text>
     
-    <a-entity
-  geometry="primitive: plane; width: 4; height: auto"
-  position="0 2 -0.5"
-  rotation="0 180 0"
-  material="color: blue"
-  text="value: . >>>>"></a-entity>
+    <a-mixin id="welcometxt2" text="color: black; anchor: center; font: sourcecodepro; value: I could post things I like, what I work with or am up to, but these change too often. find me at social media and lets talk."></a-mixin>
+    <a-text mixin="welcometxt2" font="kelsonsans" width="10" position="0 -2 0"  rotation="0 0 0"></a-text>
     
-        <a-entity
-  geometry="primitive: plane; width: 8; height: auto"
-  position="0 3 0"
-  material="color: blue"
-  text="value: This my personal website. You will find some pictures and random thoughts. Take a walk!"></a-entity>
-
-    <a-entity
-  geometry="primitive: plane; width: 8; height: auto"
-  position="0 2 0"
-  material="color: blue"
-  text="value: << Things I like.                Things I regret >>"></a-entity>
-
+    <a-cylinder onclick="window.location = 'http://github.com/rafaelhss'" id="github" class="apagar" radius="0.1" transparen="true"  src="#github" position="6.0 -2.3 0" rotation="0 90 90" scale="2 0.1 2"></a-cylinder>
+    <a-cylinder onclick="window.location = 'http://twitter.com/rafelrafel'" id="twitter" class="apagar" radius="0.1" transparen="true"  src="#twitter" position="6.3 -2.5 0" rotation="0 90 90" scale="2 0.1 2"></a-cylinder>
+    <a-cylinder onclick="window.location = 'https://www.facebook.com/rafael.henrique.507464'" id="facebook" class="apagar" radius="0.1" transparen="true"  src="#facebook" position="6.6 -2.3 0" rotation="0 90 90" scale="2 0.1 2"></a-cylinder>
+    
+    
+  
+    
     <!--
     <a-sky color="#000"></a-sky>
     <a-sky id="fundo" src="#skyTexture"></a-sky>
     -->
      <a-assets>
-    <video id="antarctica" autoplay loop="true" src="vid/IMG_2133.MOV"> </video>
+    <video id="antarctica" autoplay loop="true" src="vid/IMG_2341.mp4"> </video>
     </a-assets>
 
     <!-- Using the asset management system. -->
-    <a-videosphere src="#antarctica" radius="5000" ></a-videosphere>
+    <a-videosphere src="#antarctica" radius="5000" rotation="0 -55 0"></a-videosphere>
     
 </a-scene>
 </body>
